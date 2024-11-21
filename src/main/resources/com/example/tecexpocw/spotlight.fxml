@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tecexpocw.Spotlight">
+    <children>
+        <BorderPane prefHeight="600.0" prefWidth="1300.0">
+            <top>
+                <AnchorPane prefHeight="34.0" prefWidth="1300.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="22.0" layoutY="9.0" text="Spotlight Case Project Details">
+                            <font>
+                                <Font name="Tahoma" size="13.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </top>
+            <left>
+                <AnchorPane prefHeight="566.0" prefWidth="215.0" styleClass="left-form" stylesheets="@style2.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="68.0" layoutY="217.0" text="WelCome!" textFill="WHITE">
+                            <font>
+                                <Font name="Tahoma" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="71.0" layoutY="246.0" prefHeight="28.0" prefWidth="71.0" text="Sarah.." textFill="WHITE">
+                            <font>
+                                <Font name="Tahoma Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Line endX="13.499992370605469" layoutX="150.0" layoutY="283.0" startX="-100.0" stroke="WHITE" />
+                        <Button fx:id="points" layoutX="33.0" layoutY="304.0" onAction="#onPointButtonClick" prefHeight="30.0" prefWidth="150.0" styleClass="transparent-button" text="Points">
+                            <font>
+                                <Font name="Tahoma Bold" size="12.0" />
+                            </font></Button>
+                  <Button fx:id="visual" layoutX="33.0" layoutY="343.0" onAction="#onVisualButtonClick" prefHeight="30.0" prefWidth="150.0" styleClass="transparent-button" text="Visual" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="71.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/point.png" />
+                     </image></ImageView>
+                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="71.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/ranking.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="exit" fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="532.0" onMouseClicked="#onExitButtonClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../image/logout.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="37.0" layoutY="532.0" text="Exit" textFill="WHITE" />
+                    </children>
+                </AnchorPane>
+            </left>
+            <center>
+                <AnchorPane prefHeight="566.0" prefWidth="837.0" styleClass="right-form" stylesheets="@style2.css" BorderPane.alignment="CENTER">
+                    <children>
+
+                        <TableView fx:id="projectTableView" layoutX="40.0" layoutY="148.0" prefHeight="323.0" prefWidth="1004.0" styleClass="transparent-button">
+                            <columns>
+                                <TableColumn fx:id="projectIdColumn" prefWidth="65.333251953125" text="Project ID" />
+                                <TableColumn fx:id="projectNameColumn" prefWidth="134.6666030883789" text="Project Name" />
+                                <TableColumn fx:id="projectCategoryColumn" prefWidth="115.33338928222656" text="Project Category" />
+                                <TableColumn fx:id="projectMembersColumn" prefWidth="182.66665649414062" text="Project Members" />
+                                <TableColumn fx:id="projectDescriptionColumn" minWidth="6.0" prefWidth="190.6666259765625" text="Project Description" />
+                                <TableColumn fx:id="projectCountryColumn" minWidth="0.0" prefWidth="139.333251953125" text="Project Country" />
+                                <TableColumn fx:id="projectImageColumn" prefWidth="176.66656494140625" text="logo" />
+
+                            </columns>
+                        </TableView>
+                        <Label layoutX="383.0" layoutY="97.0" text="Spotlight Case Project List" textFill="#38795a">
+                            <font>
+                                <Font name="Tahoma Bold" size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</StackPane>

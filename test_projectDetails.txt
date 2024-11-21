@@ -1,0 +1,3 @@
+Category Software
+1,Test Project,Software,John Doe,This is a test project,USA,test_image.png
+2,Another Project,Hardware,Jane Doe,This is another project,UK,another_image.jpg
